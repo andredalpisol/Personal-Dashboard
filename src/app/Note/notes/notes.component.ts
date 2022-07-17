@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Note } from '../shared/notes.model';
-import { NoteService } from '../shared/note.service';
+import { Note } from '../../shared/notes.model';
+import { NoteService } from '../../shared/note.service';
 import { TestBed } from '@angular/core/testing';
 
 @Component({

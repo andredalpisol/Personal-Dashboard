@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { NotificationService } from '../shared/notification.service';
-import { TodoService } from '../shared/todo.service';
-import { Todo } from '../shared/todo.model';
+import { TodoService } from '../../shared/todo.service';
+import { Todo } from '../../shared/todo.model';
 
 @Component({
   selector: 'app-todo-edit',
@@ -13,7 +12,7 @@ import { Todo } from '../shared/todo.model';
 export class TodoEditComponent implements OnInit {
 
   todo!: Todo;
-  constructor(private route: ActivatedRoute, private todoService: TodoService, private router: Router, private NotificationService: NotificationService) { }
+  constructor(private route: ActivatedRoute, private todoService: TodoService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
@@ -24,6 +23,5 @@ export class TodoEditComponent implements OnInit {
   onFormSubmit(form: NgForm): void {
     this.todoService.updateTodo(this.todo.id, form.value);
     this.router.navigateByUrl("/todo");
-    this.NotificationService.show("Tarefa Atualizada!")
   }
 }
