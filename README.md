@@ -7,7 +7,7 @@
   <br>
   <br>
 
-Building a personal dashboard app in Angular, recourses used:
+Building a personal dashboard app in Angular, resources used:
 - Routing;
 - Animation;
 - Service;
