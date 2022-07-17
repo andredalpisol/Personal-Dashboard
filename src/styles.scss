@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Montserrat:wght@500&family=Noto+Sans+JP:wght@100&family=Oswald:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+html {
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.9375rem;
+}
+
+h1.is-bold,
+h2.is-bold {
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px;
+  background: rgba(black, 0.7);
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 12px 22px;
+
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 600;
+
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(black, 0.75);
+    backdrop-filter: blur(2px);
+  }
+}
+
+.btns-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  &.btns-center {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.has-blurred-white-bg {
+  background: rgba(white, 0.85);
+  backdrop-filter: blur(20px);
+}
+
+.text-box,
+.text-area {
+  font-size: 18px;
+  font-family: inherit;
+  padding: 8px 10px;
+  width: 100%;
+
+  background-color: rgba(white, 0.85);
+
+  border: 2px solid rgba(black, 0.3);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: rgba(white, 0.95);
+    border-color: rgba(black, 0.42);
+  }
+
+  &:focus {
+    background-color: white;
+    outline: none;
+    border-color: rgba(black, 0.42);
+  }
+}
+
+.text-area {
+  resize: none;
+  min-height: 170px;
+}
+
+.form-field {
+  margin-bottom: 13px;
+}

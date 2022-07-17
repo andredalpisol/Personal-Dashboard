@@ -1,0 +1,24 @@
+<div class="edit-bookmark-wrapper">
+    <p *ngIf="!bookmark">Atalho não econtrado.</p>
+    <ng-container *ngIf="bookmark">
+        <h2 class="is-bold">{{bookmark.name}}</h2>
+        <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
+            <div class="textanderror">
+                <label class="form-label">Título:</label>
+                <input type="text" [ngModel]="bookmark.name" #nameField="ngModel" name="name" class="text-box"
+                    placeholder="Digite o titulo do atalho.">
+            </div>
+            <div class="textanderror">
+                <label class="form-label">URL:</label>
+                <input type="url" [ngModel]="bookmark.url" #urlField="ngModel" name="url" class="text-box"
+                    placeholder="Ex: http://example.com">
+            </div>
+
+            <div class="btns-container ">
+                <a routerLink="../../" class="btn">Fechar</a>
+                <button type="button" (click)="delete()" class="btn ">Deletar</button>
+                <button class="btn align-end" type="submit">Salvar</button>
+            </div>
+        </form>
+    </ng-container>
+</div>

@@ -1,0 +1,63 @@
+.tabs {
+  display: flex;
+  padding: 0.625rem;
+  background-color: rgba(white, 0.25);
+  border-radius: 12px;
+  gap: 0.875rem;
+
+  padding: 0.625rem;
+  margin: 0.75rem;
+  margin-top: 3.125rem;
+}
+
+.tab {
+  position: relative;
+  text-decoration: none;
+}
+.tab-title {
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+
+  i {
+    color: #222;
+    cursor: pointer;
+    position: relative;
+  }
+
+  transition: all 0.4s cubic-bezier(0.175, 0.2, 0.32, 1.7);
+}
+
+.tab.selected .tab-title {
+  transform: translateY(-20px);
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.175, 0.2, 0.32, 1.7);
+}
+
+// STYLES FOR THE TAB TITLE BACKGROUND 'SHAPE'
+
+.tab-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #f8b5a5, #e2d2e2);
+  border-radius: 12px;
+
+  transition: all 0.25s;
+}
+
+.tab-title:hover::before {
+  transform: scale(1.07);
+}
+
+.tab.selected .tab-title::before {
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(1.07);
+}
+
+//END OF STYLES FOR THE TAB TITLE BACKGROUND 'SHAPE'
