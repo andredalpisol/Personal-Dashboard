@@ -1,4 +1,19 @@
-# Personaldashboard2
+# Personal Dashboard
+  <br>
+
+<div align="center">
+<a href="https://imgur.com/dS5e6uA"><img src="https://i.imgur.com/dS5e6uA.png" title="source: imgur.com" width="555px"/></a>
+</div>
+  <br>
+  <br>
+
+Building a personal dashboard app in Angular, recourses used:
+- Routing;
+- Animation;
+- Service;
+- Local storage;
+
+Still not 100% done, will be improving in the following months :)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
