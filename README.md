@@ -7,6 +7,7 @@
 ## :computer: Tecnologias
 
 - Angular;
+- Typescript;
 - Angular Routing;
 - Angular Animation;
 - Local storage;
